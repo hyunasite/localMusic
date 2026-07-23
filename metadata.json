@@ -1,0 +1,6 @@
+{
+  "name": "Local Music Player",
+  "description": "A modern offline local music player with dark mode, admin music management, and responsive design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

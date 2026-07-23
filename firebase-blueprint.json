@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "songs": {
+      "title": "Songs",
+      "description": "Collection of imported and sample songs synced across all devices",
+      "properties": {
+        "id": { "type": "string", "description": "Unique song identifier" },
+        "title": { "type": "string", "description": "Song title" },
+        "artist": { "type": "string", "description": "Artist name" },
+        "album": { "type": "string", "description": "Album name" },
+        "duration": { "type": "number", "description": "Duration in seconds" },
+        "audioUrl": { "type": "string", "description": "Audio source URL" },
+        "artworkUrl": { "type": "string", "description": "Artwork image URL" },
+        "createdAt": { "type": "number", "description": "Creation timestamp" },
+        "isSample": { "type": "boolean", "description": "Is preset sample song" },
+        "hasAudioChunks": { "type": "boolean", "description": "Indicates audio binary is stored in subcollection chunks" },
+        "chunkCount": { "type": "number", "description": "Total number of audio chunks" },
+        "mimeType": { "type": "string", "description": "MIME type of audio file (e.g. audio/mpeg)" }
+      },
+      "required": ["id", "title", "artist", "duration"]
+    },
+    "playlists": {
+      "title": "Playlists",
+      "description": "User created playlists with custom cover photo and selected songs",
+      "properties": {
+        "id": { "type": "string", "description": "Unique playlist ID" },
+        "name": { "type": "string", "description": "Playlist name" },
+        "coverUrl": { "type": "string", "description": "Cover photo URL or base64" },
+        "songIds": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "List of song IDs in playlist"
+        },
+        "createdAt": { "type": "number", "description": "Creation timestamp" }
+      },
+      "required": ["id", "name", "coverUrl", "songIds"]
+    }
+  }
+}
